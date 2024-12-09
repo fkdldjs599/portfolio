@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - SHIN HYERIM</title>
 
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -36,17 +39,21 @@
         <div class="inner">
             <h1 class="h_text">
                 <div class="h_line1">
-                    <span class="word word_1">H</span>
-                    <span class="word word_2">Y</span>
-                    <span class="word word_3">E</span>
-                    <span class="word word_4">R</span>
-                    <span class="word word_5">I</span>
-                    <span class="word word_6">M</span>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span class="word word_7">S</span>
-                    <span class="word word_8">H</span>
-                    <span class="word word_9">I</span>
-                    <span class="word word_10">N</span>
+                    <div class="name top">
+                        <span class="word word_1">H</span>
+                        <span class="word word_2">Y</span>
+                        <span class="word word_3">E</span>
+                        <span class="word word_4">R</span>
+                        <span class="word word_5">I</span>
+                        <span class="word word_6">M</span>
+                    </div>
+
+                    <div class="name bot">
+                        <span class="word word_7">S</span>
+                        <span class="word word_8">H</span>
+                        <span class="word word_9">I</span>
+                        <span class="word word_10">N</span>
+                    </div>
                 </div>
                 <div class="h_line2">Publisher</div>
                 <div class="h_line3">Portfolio</div>
@@ -66,25 +73,467 @@
 
 
     <section id="portfolio" class="container">
-        <ul class="tab_ul">
-            <li class="tab_li">개인 프로젝트</li>
-            <li class="tab_li">회사 프로젝트</li>
-        </ul>
+        <div class="inner">
+            <h2 class="p_img_area">
+                <img src="img/port_word.png" alt="PORTFOLIO" class="word_img">
+            </h2>
 
-        <div class="tab tab1">
-            <div class="p_swiper">
-                <ul class="p_ul swiper-wrapper">
-                    <li class="p_li swiper-slide">개인작업물1</li>
-                </ul>
-            </div>
-        </div>
+            <ul class="tab_ul">
+                <li class="tab_li">
+                    #경력 프로젝트
+                    <i class="bar"></i>
+                </li>
+                <li class="tab_li">
+                    #개인 프로젝트
+                    <i class="bar"></i>
+                </li>
+            </ul>
 
-        <div class="tab tab2">
-            <div class="b_swiper">
-                <ul class="b_ul swiper-wrapper">
-                    <li class="b_li swiper-slide">회사작업물1</li>
-                </ul>
-            </div>
+            <article class="slide_area">
+                <div class="tab">
+                    <div class="slide b_swiper">
+                        <ul class="s_ul swiper-wrapper">
+                            <li class="s_li swiper-slide law">
+                                <a href="law.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">Lawpaper</h3>
+                                        <p class="intro">변호사 견적/상담 서비스</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide sm">
+                                <a href="smm.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB</div>
+                                        <h3 class="title">SM메이커스</h3>
+                                        <p class="intro">크로스핏 관리자용 인트라넷</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/적응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide exit">
+                                <a href="exit.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB</div>
+                                        <h3 class="title">엑시트컴퍼니</h3>
+                                        <p class="intro">전화상담 기업 인트라넷</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/적응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide born">
+                                <a href="born.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">APP</div>
+                                        <h3 class="title">Born to GYM</h3>
+                                        <p class="intro">헬스장 운영 앱</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide carins">
+                                <a href="carins.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">카인즈</h3>
+                                        <p class="intro">차량관리 서비스 앱</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide gain">
+                                <a href="gain.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">가인투데이</h3>
+                                        <p class="intro">기업 소개,상담 서비스</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">그누보드/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">90%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide moja">
+                                <a href="moja.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">정직한모자감자탕</h3>
+                                        <p class="intro">제품 쇼핑몰 운영</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">영카트/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide atcodi">
+                                <a href="atcodi.html" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">AT CODI</h3>
+                                        <p class="intro">기업,제품 소개</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">그누보드/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="slide p_swiper">
+                        <ul class="s_ul swiper-wrapper">
+                            <li class="s_li swiper-slide">
+                                <a href="" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">Portfolio</h3>
+                                        <p class="intro">포트폴리오</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide">
+                                <a href="" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">INCOM</h3>
+                                        <p class="intro">Virtual Brand</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide">
+                                <a href="" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB/APP</div>
+                                        <h3 class="title">Medifine</h3>
+                                        <p class="intro">Virtual Brand</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide">
+                                <a href="" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB</div>
+                                        <h3 class="title">Genesis</h3>
+                                        <p class="intro">Clone coding</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/반응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="s_li swiper-slide">
+                                <a href="" class="box">
+                                    <div class="top">
+                                        <div class="cate">WEB</div>
+                                        <h3 class="title">Naver</h3>
+                                        <p class="intro">Clone coding</p>
+                                    </div>
+
+                                    <div class="contents">
+                                        <div class="img_area">
+                                            <img src="" alt="">
+                                        </div>
+
+                                        <div class="text_area">
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업방식</h4>
+                                                <p class="sub_b">하드코딩/적응형</p>
+                                            </div>
+                                            <div class="text_box">
+                                                <h4 class="sub_t">작업기여도</h4>
+                                                <p class="sub_b">100%</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btn_area">
+                                        <button type="button" class="more_btn">더보기</button>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </article>
+
+            <script>
+                var swiper = new Swiper(".b_swiper", {
+                    slidesPerView : 2.5,
+                    spaceBetween : 20,
+                    centeredSlides: true,
+                    loop: true, 
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: true,
+                    },
+                    mousewheel: false,
+                    keyboard:false,
+                    pagination: {
+                        // el: ".swiper-pagination",
+                        // type: 'fraction',
+                        // clickable: true,
+                    },
+                });
+
+                var swiper = new Swiper(".p_swiper", {
+                    slidesPerView : 2.5,
+                    spaceBetween : 20,
+                    centeredSlides: true,
+                    loop: true, 
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: true,
+                    },
+                    mousewheel: false,
+                    keyboard:false,
+                    pagination: {
+                        // el: ".swiper-pagination",
+                        // type: 'fraction',
+                        // clickable: true,
+                    },
+                });
+                
+            </script>
         </div>
     </section>
 </main>
