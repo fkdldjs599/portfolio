@@ -8,7 +8,40 @@ $(document).ready(function(){
         }else{
             $('.header').removeClass('fixed');
         }
-    })
+    });
+
+
+    var contentArr = [];
+
+    var length = $('.index section').length;
+
+    for(i = 0; i < length; i++) {
+        contentArr.push($('.index section').eq(i).offset().top);
+    }
+
+    $(window).resize(function(){
+        var length = $('.index section').length;
+        contentArr.splice(0);
+
+        for(i = 0; i < length; i++) {
+            contentArr.push($('.index section').eq(i).offset().top);
+        }
+
+        console.log(contentArr)
+    });
+
+    $('.nav_li').click(function(){
+        var idx = $(this).index();
+        if(idx == '1') {
+            $('body, html').stop().animate({scrollTop: contentArr[idx] - 300}, 500);
+        }else{
+            $('body, html').stop().animate({scrollTop: contentArr[idx]}, 500);
+        }
+    });
+
+    $('.view_btn').click(function(){
+        $('body, html').stop().animate({scrollTop: contentArr[1] - 300}, 500);
+    });
 
     $('#home').mousemove(function(e){
         const width = $('#home').width();
@@ -45,5 +78,26 @@ $(document).ready(function(){
 
     $('.back_btn').click(function(){
         history.go(-1);
+    });
+
+    $('#skills .s_box').mouseenter(function(){
+        $(this).children('.bar').stop().animate({'width': '100%'},100);
+
+        var icon = $(this).find('.icon_wrap').children('.icon');
+        icon.eq(0).stop().animate({'top': '0'},100,function(){
+            icon.eq(1).stop().animate({'top': '0'},100,function(){
+                icon.eq(2).stop().animate({'top': '0'},100);
+            })
+        });
+    });
+    $('#skills .s_box').mouseleave(function(){
+        $(this).children('.bar').stop().animate({'width': '0%'},100);
+
+        var icon = $(this).find('.icon_wrap').children('.icon');
+        icon.eq(0).stop().animate({'top': '150px'},100,function(){
+            icon.eq(1).stop().animate({'top': '150px'},100,function(){
+                icon.eq(2).stop().animate({'top': '150px'},100);
+            })
+        });
     });
 });
