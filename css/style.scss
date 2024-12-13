@@ -1,5 +1,10 @@
+html {scroll-behavior: smooth;}
+
 body {background: white; color: #191919;
-    * {box-sizing: border-box; transition: 300ms;}
+    * {box-sizing: border-box; transition: 300ms; cursor: url("../img/mouse.png") 2 2, auto;
+        &:active {cursor: url("../img/mouse.png") 2 2, auto;}
+        &::selection {background-color: #191919; color: #fff;}
+    }
     button {background: #fff; color: #191919; border: 4px solid #191919; transition: 300ms;
         &:hover {background: #191919; color: #fff;}
         img {width: 100%;}
@@ -23,12 +28,12 @@ body.dark {background: #191919; color: #fff;
 .grid {display: grid; justify-content: center; align-items: center; justify-items: center; align-content: center; width: 100%; height: 100%;}
 
 body {position: relative;}
-.header {position: fixed; top: 0; left: 0; padding: 20px 15px; width: 100%; z-index: 2; transition: 300ms;
-    &.fixed {background: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 15px;}
+.header {position: fixed; top: 0; left: 0; padding: 20px 15px; width: 100%; z-index: 5; transition: 300ms; background: #fff;
+    &.fixed {box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 15px;}
 
     .nav {width: 100%;
         .nav_ul {white-space: nowrap;}
-        .nav_li {font-size: 20px; font-weight: bold; display: inline-block; padding: 10px 20px; cursor: pointer;}
+        .nav_li {font-size: 20px; font-weight: bold; display: inline-block; padding: 10px 20px; cursor: url("../img/mouse.png") 2 2, auto;}
     }
 }
 @media (max-width: 768px) {
@@ -51,7 +56,7 @@ body {position: relative;}
 }
 
 #home {width: 100%; height: 100vh; overflow: hidden; position: relative;
-    .bg {width: 100%; height: 100%;  position: absolute; z-index: -1;}
+    .bg {width: 100%; height: 100%;  position: absolute; background-image: url("../img/backbg.png"); background-repeat: no-repeat; background-position: center center; background-size: 90%;}
 }
 
 .home {
@@ -60,7 +65,7 @@ body {position: relative;}
             .h_line1 {margin-bottom: 10px; overflow: hidden; line-height: 0.9; font-size: 1.1em;
                 .name {display: inline-block; vertical-align: middle;
                     &:first-child {margin-right: 30px;}
-                    .word {font-weight: bold; opacity: 0; letter-spacing: -25px;}
+                    .word {font-weight: bold; opacity: 0; letter-spacing: -10px;}
     
                     .word_1 {animation: show_ani 500ms 100ms forwards;}
                     .word_2 {animation: show_ani 500ms 200ms forwards;}
@@ -103,16 +108,16 @@ body {position: relative;}
 
 
 
-#intro {margin: 100px 0 0;}
+#intro {padding: 250px 0 0;}
 
 .container {
     .intro_wrap {background: #E2E2E2; padding: 30px 60px; margin-bottom: 100px;
         .i_inner {width: 1200px; margin: 0 auto;
             .flexbox {display: flex; align-items: center; width: 100%;
                 .profile_img {width: 400px; height: 400px; position: relative; top: -100px;
-                    img {width: 100%; height: 100%; object-fit: cover; animation: show_ani 500ms 100ms forwards; opacity: 0;}
+                    img {width: 100%; height: 100%; object-fit: cover; opacity: 0;}
                 }
-                .profile_txt {width: calc(100% - 400px); padding-left: 40px; font-size: 18px; line-height: 30px; opacity: 0; animation: show_ani 500ms 500ms forwards;
+                .profile_txt {width: calc(100% - 400px); padding-left: 40px; font-size: 18px; line-height: 30px; opacity: 0;
                     .bold {font-weight: bold; word-break: keep-all;}
                 }
             }
@@ -122,7 +127,7 @@ body {position: relative;}
         .c_box {width: calc((100% - 20px) / 2); border: 2px solid #191919; border-radius: 30px; overflow: hidden;
             .h3 {color: #fff; background: #191919; padding: 20px 0; font-size: 32px; text-align: center;}
             .contents {padding: 10px 35px 25px;
-                .block {padding: 20px 0; line-height: 30px; opacity: 0; animation: show_ani 500ms 100ms forwards; border-bottom: 1px solid #ddd;
+                .block {padding: 20px 0; line-height: 30px; opacity: 0; border-bottom: 1px solid #ddd;
                     &:last-child {border-bottom: 0;}
                     .date {font-size: 20px; font-weight: 500; margin-bottom: 5px;}
                     .h4 {font-size: 24px; font-weight: bold;}
@@ -196,7 +201,7 @@ body {position: relative;}
     }
 
     .container {
-        .intro_wrap {padding: 0 15px 40px;
+        .intro_wrap {padding: 0 15px 40px; margin-bottom: 50px;
             .i_inner {
                 .flexbox {flex-direction: column;
                     .profile_img {width: 400px; height: 400px;}
@@ -250,8 +255,11 @@ body {position: relative;}
 .container {
     .sub_title {font-size: 32px; margin-bottom: 20px; text-align: center;}
     .s_flex {display: flex; gap: 20px; align-items: start;
-        .s_box {width: calc((100% - 20px) / 2); padding: 50px 20px; background: #191919; color: #fff; overflow: hidden;
-            .border {position: relative; padding-bottom: 100px;
+        .s_box {width: calc((100% - 20px) / 2); padding: 50px 20px; background: no-repeat center center / cover; color: #fff; overflow: hidden; position: relative;
+            &.box1 {background-image: url("../img/design.jpg");}
+            &.box2 {background-image: url("../img/code.jpg");}
+            .black_bg {background: rgba(0,0,0,0.85); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;}
+            .border {position: relative; z-index: 3; padding-bottom: 100px;
                 .h3 {font-size: 40px; margin-bottom: 50px;}
                 .subtxt {font-size: 16px;}
 
@@ -262,7 +270,7 @@ body {position: relative;}
                     }
                 }
             }
-            .bar {width: 0%; height: 1px; display: block; background: #ddd;}
+            .bar {width: 0%; height: 1px; display: block; background: #ddd; position: relative; z-index: 3;}
         }
     }
 }
@@ -282,6 +290,8 @@ body {position: relative;}
 }
 
 @media (max-width: 768px) {
+    #skills {padding: 80px 0;}
+
     .container {
         .s_flex {flex-direction: column;
             .s_box {width: 100%;
@@ -307,10 +317,10 @@ body {position: relative;}
 .container {
     .p_img_area {width: 100%; overflow: hidden; margin: 30px 0; padding: 0 15px; display: none;
         &.on {display: block;}
-        .word_img {width: 100%; animation: port_ani 1200ms 100ms forwards;}
+        .word_img {width: 100%; transform: translateY(230px);}
     }
     .tab_ul {width: 100%; text-align: center; font-size: 0; margin-bottom: 60px;
-        .tab_li {font-size: 20px; font-weight: bold; display: inline-block; vertical-align: middle; padding: 15px 30px; position: relative; cursor: pointer;
+        .tab_li {font-size: 20px; font-weight: bold; display: inline-block; vertical-align: middle; padding: 15px 30px; position: relative; cursor: url("../img/mouse.png") 2 2, auto;
             &:first-child {margin-right: 30px;}
             .bar {position: absolute; bottom: 0; left: 0; width: 0%; height: 3px; background: #191919; display: none; transition: 300ms;}
         }
@@ -323,7 +333,7 @@ body {position: relative;}
                         &:hover {transform: translateY(-20px);}
                        .top {margin-bottom: 16px; font-size: 14px;
                             .cate {font-size: 1em; margin-bottom: 20px; font-weight: 500;}
-                            .title {font-size: 2.5em; margin-bottom: 20px;}
+                            .title {font-size: 2.2em; margin-bottom: 20px;}
                             .intro {font-size: 1em; margin-bottom: 20px;}
                         }
                         .contents {margin-bottom: 25px;
@@ -355,7 +365,7 @@ body {position: relative;}
 
 
 @media (max-width: 600px) {
-    // #portfolio {padding: 50px 0 0;}
+    #portfolio {padding: 50px 0 0;}
 
     .container {
         .tab_ul {margin-bottom: 30px;
@@ -427,13 +437,15 @@ body {position: relative;}
     }
     .contact_bar {margin: 50px auto 50px; width: 2px; height: 200px; background: #ddd; display: block;}
 
-    .contact_wrap {display: flex; gap: 20px;
-        .contact_box {width: calc((100% - 20px) / 2); background: #EAEAEA; padding: 20px; text-align: center; height: 300px;
-            .icon_area {margin-bottom: 50px;
-                .icon {width: 80px;}
-            }
-            .text_area {
-                .underline {font-size: 22px; text-decoration: underline; font-weight: 600;}
+    .contact_wrap {
+        .inner {display: flex; gap: 20px;
+            .contact_box {width: calc((100% - 20px) / 2); background: #EAEAEA; padding: 20px; text-align: center; height: 300px;
+                .icon_area {margin-bottom: 50px;
+                    .icon {width: 80px;}
+                }
+                .text_area {
+                    .underline {font-size: 22px; text-decoration: underline; font-weight: 600;}
+                }
             }
         }
     }
@@ -446,16 +458,17 @@ body {position: relative;}
 
 
 @media (max-width: 768px) {
-    #contact {margin: 0 0 100px;}
     .container {
         .contact_bar {height: 100px;}
-        .contact_wrap {flex-direction: column;
-            .contact_box {width: 100%; height: 200px;
-                .icon_area {margin-bottom: 30px;
-                    .icon {width: 60px;}
-                }
-                .text_area {
-                    .underline {font-size: 18px;}
+        .contact_wrap {
+            .inner {flex-direction: column;
+                .contact_box {width: 100%; height: 200px;
+                    .icon_area {margin-bottom: 30px;
+                        .icon {width: 60px;}
+                    }
+                    .text_area {
+                        .underline {font-size: 18px;}
+                    }
                 }
             }
         }
@@ -477,20 +490,10 @@ body {position: relative;}
 }
 
 
-.footer {background: #797979; padding: 80px 0;
+.footer {background: #555555; padding: 80px 15px;
+    .copy {font-size: 14px; color: #aaa; font-weight: 600; margin-bottom: 10px;}
     .f_txt {font-size: 16px; color: #fff; font-weight: bold;}
 }
-
-
-
-.law .img_area {background-image: url("../img/law_1.png");}
-.sm .img_area {background-image: url("../img/sm_1.png");}
-.exit .img_area {background-image: url("../img/exit_1.png");}
-.born .img_area {background-image: url("../img/born_1.png");}
-.carins .img_area {background-image: url("../img/carins_1.png");}
-.atcodi .img_area {background-image: url("../img/atcodi_full.png");}
-.gain .img_area {background-image: url("../img/gain_full.png");}
-.moja .img_area {background-image: url("../img/moja_full.png");}
 
 
 /* 서브 */
@@ -503,20 +506,18 @@ body {position: relative;}
     .title {width: calc(100% - 60px); display: inline-block; vertical-align: middle; font-size: 30px; text-align: center;}
 }
 
-#moja .img_area {background-image: url("../img/moja_full.png");}
-
 .main {padding: 104px 0;
     .sub_top {margin-bottom: 100px;
         .inner {display: flex;
             .img_area {width: 50%; height: 500px; overflow: hidden; background-position: top center; background-size: cover; background-repeat: no-repeat; border: 1px solid #191919;}
     
             .text_area {width: 50%; padding: 0 0 0 80px;
-                .text_box {padding: 30px 0; border-bottom: 1px solid #ddd;
+                .text_box {padding: 20px 0; border-bottom: 1px solid #ddd;
                     &:last-child {margin-bottom: 0; border-bottom: 0;}
 
                     .h2 {font-size: 18px; margin-bottom: 15px;}
                     .text {font-size: 16px; font-weight: 500;
-                        .link_a {text-decoration: underline;}
+                        .link_a {text-decoration: underline; display: inline-block;}
                     }
                 }
             }
@@ -524,9 +525,9 @@ body {position: relative;}
     }
 
     .sub_bot {
-        .text_block {margin-bottom: 80px;
+        .text_block {
             .b_title {font-size: 22px; margin-bottom: 30px;}
-            .b_text {font-size: 16px;}
+            .b_text {font-size: 16px; line-height: 1.5;}
         }
         .contents_img {
             width: 100%;
@@ -538,12 +539,29 @@ body {position: relative;}
     }
 }
 
+.law .img_area {background-image: url("../img/law_1.png");}
+.sm .img_area {background-image: url("../img/sm_1.png"); background-position: top left!important;}
+.exit .img_area {background-image: url("../img/exit_1.png");}
+.born .img_area {background-image: url("../img/born_1.png");}
+.carins .img_area {background-image: url("../img/carins_1.png");}
+.atcodi .img_area {background-image: url("../img/atcodi_full.png");}
+.gain .img_area {background-image: url("../img/gain_full.png");}
+.moja .img_area {background-image: url("../img/moja_full.png");}
+
+.port .img_area {background-image: url("../img/port_full.png");}
+.incom .img_area {background-image: url("../img/incom_full.png");}
+.medi .img_area {background-image: url("../img/medifine_full.png");}
+.genesis .img_area {background-image: url("../img/genesis_full.png");}
+.naver .img_area {background-image: url("../img/naver_full.png");}
+
+
+
 
 @media (max-width: 768px) {
     .header {
         .title {font-size: 18px;}
     }
-    .main {padding: 70px 0;
+    .main {padding: 70px 0 20px;
         .sub_top {margin-bottom: 50px;
             .inner {flex-direction: column; gap: 10px;
                 .img_area {width: 100%; height: 350px;}
@@ -561,6 +579,10 @@ body {position: relative;}
                 .b_text {font-size: 14px;}
             }
         }
+    }
+    .footer {padding: 45px 15px;
+        .copy {font-size: 12px;}
+        .f_txt {font-size: 14px;}
     }
 }
 
