@@ -55,12 +55,12 @@ body {position: relative;}
     }
 }
 
-#home {width: 100%; height: 100vh; overflow: hidden; position: relative;
-    .bg {width: 100%; height: 100%;  position: absolute; background-image: url("../img/backbg.png"); background-repeat: no-repeat; background-position: center center; background-size: 90%;}
+#home {width: 100%; height: 100vh; overflow: hidden; position: relative; border-bottom: 7px solid #191919;
+    .bg {width: 100%; height: 100%; position: absolute; background-image: url("../img/backbg.png"); background-repeat: no-repeat; background-position: center center; background-size: 70%; z-index: 3;}
 }
 
 .home {
-    .inner {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;
+    .inner {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; position: absolute; z-index: 3;
         .h_text {width: 100%; text-align: center; margin: 90px 0; letter-spacing: -1px; font-size: 90px;
             .h_line1 {margin-bottom: 10px; overflow: hidden; line-height: 0.9; font-size: 1.1em;
                 .name {display: inline-block; vertical-align: middle;
@@ -106,6 +106,53 @@ body {position: relative;}
     100% {transform: translateY(20px);}
 }
 
+
+.textcontents {height: 300vh; position: relative; padding-top: 250vh;
+    .line {display: block; margin: 100px auto 0; position: absolute; top: 80px; left: 50%; transform: translateX(-50%) rotate(90deg); font-size: 20px; font-weight: bold;}
+    .t_inner {position: relative;
+        .txt_wrap {transition: none; display: flex; flex-direction: column; background: url("../img/mykeyword.png") no-repeat center center / 100%;
+            &.fixed {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 1200px; padding: 0 15px; height: 100vh; justify-content: center;}
+            .box_top {align-items: center; font-size: 0;
+                .top {display: inline-block; vertical-align: middle; width: calc(100% / 3); opacity: 0;
+                    &:nth-child(2) {text-align: center;}
+                    &:nth-child(3) {text-align: right;}
+                    .ck {width: 25px; display: inline-block; vertical-align: middle;}
+                    .eng {font-size: 20px; font-weight: bold; display: inline-block; vertical-align: middle; margin-left: 5px;}
+                }
+            }
+            .graph_area {margin: 30px 0; display: block; width: 100%; height: 10px; background: #ddd; position: relative; border-radius: 20px; overflow: hidden;
+                .graph {position: absolute; top: 0; left: 0; width: 0%; height: 100%; background: #191919;}
+            }
+            .box_bot {font-size: 0;
+                .keyword {display: inline-block; vertical-align: middle; width: calc(100% / 3); font-size: 20px; font-weight: bold; opacity: 0;
+                    &:nth-child(2) {text-align: center;}
+                    &:nth-child(3) {text-align: right;}
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .textcontents {
+        .t_inner {padding: 0;
+            .txt_wrap {
+                .box_top {
+                    .top {
+                        .ck {width: 12px; display: none;}
+                        .eng {font-size: 12px;}
+                    }
+                }
+                .graph_area {margin: 15px 0; height: 7px;
+                    .graph {}
+                }
+                .box_bot {
+                    .keyword {font-size: 12px;}
+                }
+            }
+        }
+    }
+}
 
 
 #intro {padding: 250px 0 0;}
@@ -439,7 +486,7 @@ body {position: relative;}
 
     .contact_wrap {
         .inner {display: flex; gap: 20px;
-            .contact_box {width: calc((100% - 20px) / 2); background: #EAEAEA; padding: 20px; text-align: center; height: 300px;
+            .contact_box {width: calc((100% - 20px) / 2); background: #EAEAEA; padding: 20px; text-align: center; height: 300px; opacity: 0;
                 .icon_area {margin-bottom: 50px;
                     .icon {width: 80px;}
                 }
