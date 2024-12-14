@@ -108,7 +108,7 @@ body {position: relative;}
 
 
 .textcontents {height: 300vh; position: relative; padding-top: 250vh;
-    .line {display: block; margin: 100px auto 0; position: absolute; top: 80px; left: 50%; transform: translateX(-50%) rotate(90deg); font-size: 20px; font-weight: bold;}
+    .line {display: block; margin: 100px auto 0; position: absolute; top: 80px; left: 50%; transform: translateX(-50%) rotate(90deg); font-size: 20px; font-weight: bold; white-space: nowrap;}
     .t_inner {position: relative;
         .txt_wrap {transition: none; display: flex; flex-direction: column; background: url("../img/mykeyword.png") no-repeat center center / 100%;
             &.fixed {position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 1200px; padding: 0 15px; height: 100vh; justify-content: center;}
@@ -135,6 +135,7 @@ body {position: relative;}
 
 @media (max-width: 768px) {
     .textcontents {
+        .line {font-size: 14px;}
         .t_inner {padding: 0;
             .txt_wrap {
                 .box_top {
@@ -572,15 +573,17 @@ body {position: relative;}
     }
 
     .sub_bot {
-        .text_block {
+        .text_block { margin-bottom: 100px;
+            &:last-child {margin-bottom: 0;}
             .b_title {font-size: 22px; margin-bottom: 30px;}
             .b_text {font-size: 16px; line-height: 1.5;}
-        }
-        .contents_img {
-            width: 100%;
-            .b_title {font-size: 22px; margin-bottom: 30px;}
-            .img_wrap {
-                img {width: 70%; margin: 0 auto; display: block;}
+
+            .img_swiper {width: 100%; overflow: hidden; background: #191919; padding: 10px 0;}
+
+            .img_ul {
+                .img_li {width: 48%; display: inline-block; vertical-align: top;
+                    img {width: 100%;}
+                }
             }
         }
     }
@@ -620,8 +623,8 @@ body {position: relative;}
                 }
             }
         }
-        .sub_box {
-            .text_block {
+        .sub_bot {
+            .text_block {margin-bottom: 30px;
                 .b_title {font-size: 18px;}
                 .b_text {font-size: 14px;}
             }

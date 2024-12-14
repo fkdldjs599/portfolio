@@ -91,6 +91,60 @@
                     <br><br>                    
                 </p>
             </div>
+
+            <div class="text_block">
+                <h3 class="b_title">디자인 작업 시안</h3>
+                <div class="w_img_area">
+                    <p class="b_text">
+                        <strong>작업툴 = 포토샵</strong><br>
+                        좌우로 슬라이드 해주세요 :)
+                    </p>
+                    <br><br>
+
+                    <div class="img_swiper">
+                        <ul class="img_ul swiper-wrapper">
+                            <li class="img_li swiper-slide">
+                                <img src="img/at_1.jpg" alt="atcodi">
+                            </li>
+                            <li class="img_li swiper-slide">
+                                <img src="img/at_2.jpg" alt="atcodi">
+                            </li>
+                            <li class="img_li swiper-slide">
+                                <img src="img/at_3.jpg" alt="atcodi">
+                            </li>
+                            <li class="img_li swiper-slide">
+                                <img src="img/at_4.jpg" alt="atcodi">
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                        var swiper = new Swiper(".img_swiper", {
+                            slidesPerView : 1.5,
+                            spaceBetween : 10,
+                            centeredSlides: true,
+                            loop: true, 
+                            autoplay: {
+                                delay: 3000,
+                                disableOnInteraction: true,
+                            },
+                            mousewheel: true,
+                            keyboard:false,
+                            pagination: {
+                                // el: ".swiper-pagination",
+                                // type: 'fraction',
+                                // clickable: true,
+                            },
+        
+                            breakpoints : {
+                                768: {
+                                    slidesPerView : 2.5,
+                                    spaceBetween : 20,
+                                }
+                            },
+                        });
+                        </script>
+                </div>
+            </div>
         </div>
     </section>
 </main>
