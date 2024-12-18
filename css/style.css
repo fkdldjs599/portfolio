@@ -155,7 +155,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  position: absolute;
+  position: relative;
   z-index: 3;
 }
 .home .inner .h_text {
