@@ -60,7 +60,7 @@ body {position: relative;}
 }
 
 .home {
-    .inner {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; position: absolute; z-index: 3;
+    .inner {display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; position: relative; z-index: 3;
         .h_text {width: 100%; text-align: center; margin: 90px 0; letter-spacing: -1px; font-size: 90px;
             .h_line1 {margin-bottom: 10px; overflow: hidden; line-height: 0.9; font-size: 1.1em;
                 .name {display: inline-block; vertical-align: middle;
